@@ -42,7 +42,7 @@ Fork This repo to Use it
 
 ## Authors
 
-* **Fredrick Femar Ochieng** - *Initial work* - [PurpleBooth](https://github.com/fescii)
+* **Fredrick Femar Ochieng** - *Initial work* - [Femar](https://github.com/fescii)
 
 
 ## License
