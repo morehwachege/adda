@@ -1,0 +1,119 @@
+// sidebar start
+.widget-area {
+    @media #{$md-device} {
+        margin-top: 30px;
+    }
+    @media #{$sm-device} {
+        margin-top: 10px;
+    }
+}
+
+/*------- widget title start -------*/
+.widget-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $black-soft;
+    margin-bottom: 45px;
+    text-transform: capitalize;
+    position: relative; 
+    // responsive
+    @media #{$lg-device} {
+        font-size: 16px;
+    }
+    &:before {
+        bottom: -12px;
+        left: 0;
+        width: 30px;
+        height: 1px;
+        content: "";
+        position: absolute;
+        background-color: $theme-color;
+    }
+}
+/*------- widget title end -------*/
+
+/*------- like page list wrapper start -------*/
+.like-page {
+    &-list-wrapper {
+        li {
+            margin-bottom: 35px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.unorder-list-info {
+    padding-left: 10px;
+}
+.list-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    padding-bottom: 3px;
+    // responsive
+    @media #{$lg-device} {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    a {
+        color: $black-soft;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+.list-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: $paragraph-light;
+    text-transform: capitalize;
+    a {
+        color: $paragraph-light;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+.unorder-list {
+    display: flex;
+    .like-button { 
+        font-size: 20px;
+        margin-left: auto;
+        position: relative;
+        .heart-color {
+            top: 50%;
+            left: 0;
+            position: absolute;
+            opacity: 1;
+            visibility: hidden;
+            transform: translateY(-50%);
+            transition: 0.4s;
+        }
+        &:hover,
+        &.active {
+            .heart {
+                opacity: 0;
+                visibility: hidden;
+            }
+            .heart-color {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+/*------- like page list wrapper end -------*/
+
+
+// sweet memory style
+.sweet-galley {
+    margin-bottom: -5px;
+}
+.gallery-tem {
+    margin-bottom: 5px;
+}
+.gallery-tem {
+    border-radius: 4px;
+    overflow: hidden;
+}

@@ -1,0 +1,337 @@
+/*----------------------------------------
+            header area start
+----------------------------------------*/
+.header-top {
+    box-shadow: 0px 1px 20px 0px rgba(85, 85, 85, 0.25);
+}
+
+
+.header-top-navigation {
+    // responsive
+    @media #{$sm-device} {
+        text-align: center;
+        margin-top: 50px;
+    }
+    ul {
+        li {
+            display: inline-block;
+            margin-right: 60px;
+            position: relative;
+            &:before {
+                top: 50%;
+                left: 100%;
+                content: '/';
+                position: absolute;
+                transform: translateY(-50%);
+                display: none;
+                // responsive
+                @media #{$sm-device} {
+                    display: block;
+                }
+            }
+            /* &:nth-child(3) {
+                @media #{$xxs-device} {
+                    padding-right: 0;
+                    margin-right: 0;
+                    &:before {
+                        display: none;
+                    }
+                }
+            } */
+            // responsive
+            @media #{$lg-device} {
+                margin-right: 45px;
+            }
+            @media #{$md-device, $sm-device} {
+                margin-right: 15px;
+                padding-right: 15px;
+            }
+            &:last-child {
+                margin-right: 0;
+                padding-right: 0;
+                &:before {
+                    display: none;
+                }
+            }
+            a {
+                color: $black-soft;
+                display: block;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1;
+                padding: 21px 0;
+                text-transform: capitalize;
+                // responsive
+                @media #{$md-device} {
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 18px 0;
+                }
+                @media #{$sm-device} {
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 10px 0;
+                }
+            }
+            &:hover,
+            &.active {
+                a {
+                    color: $theme-color;
+                }
+            }
+            .message-dropdown {
+                top: 100%;
+                left: 0;
+                width: 500px;
+                height: auto;
+                padding: 15px;
+                position: absolute;
+                background-color: $white;
+                border-radius: 0 0 2px 2px;
+                z-index: 999;
+                display: none;
+                box-shadow: 0px 1px 15px 0px rgba(51, 51, 51, 0.2);
+                li {
+                    a {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// message list start
+.dropdown-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $bdr-color;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    .recent-msg {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+        color: $black-soft;
+        text-transform: capitalize;
+    }
+    .message-btn-group {
+        button {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1;
+            color: $paragraph-light;
+            margin-left: 20px;
+            &:hover {
+                color: $theme-color;
+                text-decoration: underline;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    button {
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+.msg-dropdown-footer {
+    display: flex;
+    justify-content: space-between;
+    button {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1;
+        color: $paragraph-light;
+        &:hover {
+            color: $theme-color;
+            text-decoration: underline;
+        }
+    }
+}
+.dropdown-msg-list {
+    li {
+        margin-right: 0;
+        &.msg-list-item {
+            cursor: pointer;
+            margin-right: 0;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid $bdr-color;
+            .profile-thumb {
+                width: 45px;
+            }
+            .msg-content {
+                padding-left: 10px;
+                width: calc(100% - 150px);
+                p {
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 1.4;
+                    padding-top: 3px;
+                }
+                &.notification-content {
+                    a {
+                        display: inline-block;
+                        color: $black-soft;
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                    p {
+                        display: inline;
+                    }
+                }
+            }
+            .msg-time {
+                font-size: 12px;
+                color: $paragraph-light;
+                width: 100px;
+                text-align: right;
+            }
+            .author {
+                a {
+                    color: $black-soft;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.header-top-search {
+    margin-right: 25px;
+}
+.top-search {
+    &-box {
+        min-width: 250px;
+        position: relative;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ddd;
+    }
+    &-field {
+        border: none;
+        width: 100%;
+        padding-right: 30px;
+        background-color: transparent;
+    }
+    &-btn {
+        top: 0;
+        right: 0;
+        font-size: 20px;
+        position: absolute;
+        color: $black-soft;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+
+/*----------------------------------------
+            header area end
+----------------------------------------*/
+
+/*--------- secondary menu start ---------*/
+.secondary-menu-wrapper {
+    padding-left: 300px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    //responsive
+    @media #{$lg-device} {
+        padding-left: 250px;
+    }
+    @media #{$md-device, $sm-device} {
+        padding: 0 30px;
+    }
+    .header-top-navigation {
+        padding-right: 50px;
+        text-align: right;
+        width: 100%;
+        //responsive
+        @media #{$md-device} {
+            padding-right: 30px;
+        }
+        @media #{$sm-device} {
+            margin-top: 0;
+            text-align: center;
+            padding:20px 0;
+        }
+        li {
+            margin-right: 47px;
+            //responsive
+            @media #{$md-device} {
+                margin-right: 5px;
+            }
+            // responsive
+            @media #{$sm-device} {
+                margin-right: 10px;
+                padding-right: 10px;
+                &:before {
+                    display: none;
+                }
+                &:nth-child(3) {
+                    margin-right: 10px;
+                    padding-right: 10px;
+                }
+            }
+            a {
+                font-size: 14px;
+                font-weight: 500;
+                padding: 28px 0;
+                text-transform: capitalize;
+                // responsive
+                @media #{$sm-device} {
+                    padding: 0;
+                }
+                span {
+                    // responsive
+                    @media #{$sm-device} {
+                        display: none;
+                        padding: 0;
+                    }
+                }
+                i {
+                    display: none;
+                    font-size: 18px;
+                    // responsive
+                    @media #{$sm-device} {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .post-settings-bar {
+        margin-left: inherit;
+    }
+}
+.page-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $black-soft;
+    text-transform: capitalize;
+    // responsive
+    @media #{$xs-device} {
+        font-size: 15px;
+    }
+}
+/*--------- secondary menu end ---------*/
+
+/*------ sticky menu style start ------*/
+.sticky {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+/*------ sticky menu style end ------*/

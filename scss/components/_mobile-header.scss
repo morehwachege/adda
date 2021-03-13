@@ -1,0 +1,149 @@
+/*--------- mobile header start ---------*/
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    height: 60px;
+}
+.mobile-logo,
+.mobile-header-profile {
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    background-color: $theme-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .profile-thumb-middle {
+        border-radius: 0;
+    }
+}
+
+
+.mobile-menu {
+    ul {
+        display: flex;
+        justify-content: space-around;
+        .message-list {
+            display: inherit;
+        }
+        li {
+            i {
+                font-size: 20px;
+                transition: 0.4s;
+            }
+            &:hover {
+                i {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.notification {
+    position: relative;
+    span {
+        top: -5px;
+        right: -8px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: $white;
+        font-size: 10px;
+        line-height: 20px;
+        display: block;
+        position: absolute;
+        text-align: center;
+        background-color: $theme-color;
+    }
+}
+
+// mobile search box
+.mob-search {
+    &-box {
+        width: 100%;
+        top: 100%;
+        left: 0;
+        right: 0;
+        position: absolute;
+        z-index: 999;
+        transition: 0.4s;
+        opacity: 0;
+        visibility: hidden;
+        &.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &-inner {
+        position: relative;
+    }
+    &-field {
+        width: 100%;
+        border: none;
+        height: 70px;
+        padding: 15px 50px 15px 15px;
+        background-color: $white;
+        box-shadow: 0px 1px 15px 0px rgba(51, 51, 51, 0.2); 
+    }
+    &-btn {
+        top: 50%;
+        right: 10px;
+        position: absolute;
+        cursor: pointer;
+        transform: translateY(-50%);
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+.search-trigger {
+    position: relative;
+    .close-icon {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &.show {
+        .search-icon {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .close-icon {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+/*--------- mobile header end ---------*/
+
+// mobile live chat box
+.mobile-chat-box {
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    z-index: 999;
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.mob-text-box {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    background-color: $bg-color;
+    padding: 25px;
+}
+

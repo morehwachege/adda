@@ -1,0 +1,301 @@
+.main-wrapper {
+    padding-bottom: 105px;
+    // responsive
+    @media #{$md-device, $sm-device} {
+        padding-bottom: 10px;
+        margin-bottom: 60px;
+    }
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 15px 0px rgba(51, 51, 51, 0.2);
+    // responsive
+    @media #{$sm-device} {
+        margin-bottom: 10px;
+    }
+    &-small {
+        padding: 16px;
+        // height: 75px;
+        box-shadow: none;
+        // responsive
+        @media #{$md-device, $sm-device} {
+            // height: 60px;
+        }
+    }
+    &-profile {
+        padding: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &.widget-item {
+        padding: 25px;
+    }
+}
+
+.share-box-inner {
+    display: flex;
+}
+.share-text-box {
+    position: relative;
+    padding-left: 15px;
+    
+    .share-text-field {
+        width: 100%;
+        border: none;
+        display: block;
+        height: 44px;
+        padding: 13px 90px 13px 20px;
+        position: relative;
+        border-radius: 50px;
+        overflow: hidden;
+        background-color: $bg-color;
+        box-shadow: inset 0px 1px 10px 0px rgba(85, 85, 85, 0.2);
+        transition: all 0.4s ease;
+    }
+    .btn-share {
+        top: 50%;
+        right: 3px;
+        font-size: 12px;
+        font-weight: 700;
+        color: $white;
+        line-height: 1;
+        padding: 11px 25px;
+        margin-right: 2px;
+        border-radius: 40px;
+        background-color: $theme-color;
+        position: absolute;
+        text-transform: uppercase;
+        transform: translateY(-50%);
+        // responsive
+        @media #{$xxs-device} {
+            display: none;
+        }
+        &:hover {
+            background-color: $black-soft;
+        }
+    }
+}
+
+// modal customize
+.modal-dialog {
+    max-width: 600px;
+}
+
+.post-share-btn {
+    color: $white;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 14px 30px 12px;
+    border-radius: 40px;
+    background-color: $theme-color;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+        background-color: $black-soft;
+    }
+}
+.share-field-big {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid $bdr-color;
+    height: 200px !important;
+}
+
+.posted-author {
+    margin-left: 20px;
+    .post-time {
+        display: block;
+        font-size: 14px;
+        line-height: 1;
+        padding-top: 10px;
+    }
+}
+.author {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: capitalize;
+    a {
+        color: $black-soft;
+        &:hover {
+            color: $theme-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.post-settings-bar {
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+    // align-self: flex-start;
+    span {
+        width: 20px;
+        height: 1px;
+        display: block;
+        background-color: #ccc;
+        margin-bottom: 4px;
+        transition: 0.4s;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &:hover {
+        span {
+            background-color: $theme-color;
+        }
+        .post-settings {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(20px);
+        }
+    }
+}
+.post-settings {
+    right: 0;
+    top: 100%;
+    width: 200px;
+    background-color:$white;
+    position: absolute;
+    padding: 20px;
+    z-index: 9;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 1px 15px 0px rgba(51, 51, 51, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    transform: translateY(30px);
+    li {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e5e5e5;
+        button {
+            color: $black-soft;
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+            &:hover {
+                color: $theme-color;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: none;
+        }
+    }
+}
+.arrow-shape {
+    &:before {
+        right: 10px;
+        bottom: 100%;
+        content: "";
+        position: absolute;
+        height: 20px;
+        border-bottom: 20px solid $white;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+    }
+}
+
+.post {
+    &-thumb-gallery {
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    &-thumb {
+        img {
+            width: 100%;
+        }
+    }
+    &-content {
+        padding-top: 18px;
+    }
+    &-desc {
+        padding-bottom: 16px;
+        &-secondary {
+            padding-top: 18px;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    margin-top: 20px;
+    .post-meta-like {
+        span {
+            @media #{$xxs-device} {
+                display: none;
+            } 
+        }
+        strong {
+            display: none;
+            font-size: 14px;
+            font-weight: 400;
+            padding-left: 8px;
+            color: $paragraph-light;
+            // responsive
+            @media #{$xxs-device} {
+                display: inline-block;
+            }
+        }
+    }
+    .comment-share-meta {
+        margin-left: auto;
+        li {
+            display: inline-block;
+            margin-left: 24px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+.post-meta-like,
+.post-comment,
+.post-share {
+    i {
+        font-size: 20px;
+        color: $black-soft;
+        vertical-align: middle;
+    }
+    span {
+        color: $paragraph-light;
+        vertical-align: text-bottom;
+        padding-left: 8px;
+    }
+    &:hover {
+        i,
+        span {
+            color: $theme-color;
+        }
+    }
+}
+
+// video player settings
+.plyr {
+    &--video {
+        border-radius: 5px;
+    }
+    &__control {
+        &--overlaid {
+            opacity: 0;
+        visibility: hidden;
+        }
+    }
+}

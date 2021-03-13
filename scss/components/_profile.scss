@@ -1,0 +1,275 @@
+
+/*------- profile picture style start -------*/
+.profile-menu-area {
+    margin-bottom: 20px;
+    // responsive
+    @media #{$md-device} {
+        margin-bottom: 50px;
+    }
+    @media #{$sm-device} {
+        padding: 15px;
+    }
+}
+.profile-thumb {
+    &-small {
+        width: 35px;
+        height: 35px;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+.profile-setting-box {
+    position: relative;
+    .profile-thumb-small {
+        a {
+            display: block;
+        }
+    }
+    .profile {
+        &-dropdown {
+            top: 100%;
+            right: 0;
+            width: 250px;
+            background-color: $white;
+            position: absolute;
+            z-index: 1;
+            border-radius: 0 0 2px 2px;
+            box-shadow: 0px 1px 15px 0px rgba(51, 51, 51, 0.2);
+            display: none;
+        }
+        &-head {
+            padding: 20px;
+            .name {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1;
+                padding-bottom: 7px;
+                a {
+                    color: $black-soft;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+            .mail {
+                font-size: 13px;
+                color: $paragraph;
+                display: block;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+        &-body {
+            ul {
+                padding: 20px 0;
+                border-top: 1px solid $bdr-color;
+                li {
+                    line-height: 1;
+                    margin-bottom: 15px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    a {
+                        color: $paragraph;
+                        padding: 0 20px;
+                        i {
+                            font-size: 16px;
+                            padding-right: 8px;
+                        }
+                    }
+                    &:hover {
+                        a {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.profile-thumb {
+    display: inline-block;
+    position: relative;
+    &-middle {
+        width: 45px;
+        height: 45px;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &.active {
+        overflow: visible;
+        img {
+            border-radius: 50%;
+        }
+        &:before {
+            bottom: 2px;
+            right: -2px;
+            width: 10px;
+            height: 10px;
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            background-color: #09ae82;
+        }
+    }
+}
+
+
+.profile {
+    &-banner {
+        &-small {
+            position: relative;
+            &:before {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: '';
+                position: absolute;
+                pointer-events: none;
+                border: 10px solid rgba(#c6a56b, 0.3);    
+            }
+        }  
+    }
+    &-thumb-2 {
+        width: 80px;
+        height: 80px;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+        bottom: -40px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        margin: auto;
+    }
+}
+
+.profile-desc {
+    padding: 30px;
+    margin-top: 25px;
+    p {
+        font-size: 13px;
+        color: $paragraph-light;
+        padding-top: 10px;
+    }
+}
+
+
+// profile page banner
+.profile-banner-large {
+    height: 370px;
+    //responsive
+    @media #{$md-device} {
+        height: 270px;
+    }
+    @media #{$sm-device} {
+        height: 190px;
+    }
+}
+
+.main-menu {
+    li {
+        display: inline-block;
+    }
+}
+.profile-edit-panel {
+    text-align: right;
+}
+.edit-btn {
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 11px 28px;
+    display: inline-block;
+    border-radius: 50px;
+    text-transform: capitalize;
+    background-color: $theme-color; 
+    //responsive
+    @media #{$sm-device} {
+        padding: 11px 15px;
+    }
+    &:hover {
+        background-color: $black-soft;
+    }
+}
+
+.profile-picture-box {
+    position: absolute; 
+    transform: translateY(calc(-50% - 10px));
+    background-color: $white;
+    z-index: 1;
+    //responsive
+    @media #{$lg-device} {
+        transform: translateY(calc(-50% - 10px));
+    }
+    @media #{$sm-device} {
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100px;
+    }
+}
+.secondary-navigation-style {
+    .profile-picture-box {
+        transform: translateY(calc(-50% - 17px));
+    }
+}
+.profile-picture {
+    position: relative;
+    //responsive
+    @media #{$xs-device} {
+        width: 100px;
+    }
+    &:before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        border: 10px solid $white;  
+        // responsive
+        @media #{$sm-device} {
+            border: 5px solid $white;
+        }  
+    }
+
+}
+.profile-sidebar {
+    margin-top: 105px;
+}
+
+// about author 
+.author-into-list {
+    margin-top: 27px;
+    li {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        a {
+            color: $black-soft;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.3;
+            &:hover {
+                color: $theme-color;
+            }
+            i {
+                color: $theme-color;
+                font-size: 20px;
+                padding-right: 20px;
+                //responsive
+                @media #{$lg-device} {
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+
+/*------ photo filter area start ------*/
+.secondary-menu-2 {
+    @media #{$xxs-device} {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .post-settings-bar {
+        @media #{$xxs-device} {
+            display: none;
+        }
+    }
+}
+.filter-menu {
+    margin-left: auto;
+    padding-right: 50px;
+    // responsive
+    @media #{$md-device, $sm-device} {
+        padding-right: 30px;
+    }
+    @media #{$xxs-device} {
+        padding-right: 0;
+    }
+    button {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 23px 0;
+        text-transform: capitalize;
+        margin-right: 50px;
+        // responsive
+        @media #{$lg-device} {
+            margin-right: 40px;
+        }
+        @media #{$md-device} {
+            margin-right: 20px;
+        }
+        @media #{$sm-device} {
+            margin-right: 15px;
+            padding: 5px 0;
+        }
+        @media #{$xs-device} {
+            margin-right: 10px;
+        }
+        &:hover,
+        &.active {
+            color: $theme-color;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

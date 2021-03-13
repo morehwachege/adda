@@ -1,0 +1,233 @@
+.signup-form-wrapper {
+    @media #{$lg-device}{
+        padding: 0 30px;
+    }
+    @media #{$md-device}{
+        margin-bottom: 30px;
+    }
+    // responsive
+    @media #{$xlmid-device, $lg-device, $md-device, $sm-device}{
+        padding: 47px 30px;
+    }
+    .create-acc {
+        color: $theme-color;
+        font-size: 30px;
+        font-weight: 800;
+        padding-bottom: 47px;
+        // responsive
+        @media #{$xs-device}{
+            font-size: 26px;
+        }
+    }
+}
+.signup-inner {
+    max-width: 572px;
+    margin: auto;
+    box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.25);
+    .title {
+        color: $white;
+        font-size: 18px;
+        background-color: $theme-color;
+        padding: 23px 0;
+    }
+    &--form {
+        padding: 42px 100px 50px;
+        background-color: $white;
+        position: relative;
+        // responsive
+        @media #{$lg-device, $md-device, $sm-device}{
+            padding: 42px 50px 50px;
+        }
+        @media #{$xxs-device}{
+            padding: 42px 30px 50px;
+        }
+        &:before {
+            top: 50%;
+            left: 50%;
+            content: '';
+            position: absolute;
+            height: 170px;
+            width: 174px;
+            background-image: url('../images/icons/login.png');
+            background-repeat: no-repeat;
+            transform: translate(-50%, -80%);
+        }
+        .single-field {
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid #999;
+            padding: 5px 10px;
+            margin-bottom: 28px;
+        }
+        .nice-select {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #999;
+            border-radius: 0;
+            font-size: 13px;
+            padding: 5px 10px;
+            height: 34px;
+            line-height: 30px;
+            margin-bottom: 27px;
+            background-color: transparent;
+            span {
+                color: #999;
+            }
+            &:after {
+                height: 6px;
+                width: 6px;
+                border-bottom: 1px solid #999;
+                border-right: 1px solid #999;
+            }
+            .list {
+                width: 100%;
+            }
+        }
+    }
+    .terms-condition {
+        font-size: 16px;
+        padding-top: 28px;
+        a {
+            color: $theme-color;
+        }
+    }
+}
+.submit-btn {
+    font-size: 16px;
+    font-weight: 500;
+    color: $white;
+    line-height: 1;
+    padding: 15px 20px;
+    display: block;
+    border: 1px solid transparent;
+    background-color: $theme-color;
+    width: 100%;
+    margin-top: 23px;
+    &:hover {
+        background-color: $black-soft;
+    }
+}
+.timeline-logo-area {
+    padding: 0 30px;
+    // responsive
+    @media #{$xxl-device}{
+        padding: 0 107px;
+    }
+    @media #{$md-device, $sm-device}{
+        padding: 10px 30px;
+        justify-content: space-between;
+    }
+    .timeline-logo {
+        @media #{$xs-device}{
+            width: 70px;
+        }
+    }
+    .tagline {
+        color: $black-soft;
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 70px;
+        // responsive
+        @media #{$xlmid-device}{
+            padding-left: 50px;
+        }
+        @media #{$md-device, $sm-device}{
+            padding-left: 0;
+        }
+        @media #{$xs-device}{
+            padding-left: 70px;
+        }
+        @media #{$xxs-device}{
+            padding-left: 20px;
+        }
+    }
+}
+.login-area {
+    background-color: $theme-color;
+    padding: 15px 30px;
+    // responsive
+    @media #{$xxl-device}{
+        padding: 15px 110px;
+    }
+    .single-field {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #ddd;
+        padding: 5px 10px;
+        color: $white;
+        // responsive
+        @media #{$xs-device}{
+            margin-bottom: 30px;
+        }
+    }
+    .login-btn {
+        font-size: 14px;
+        font-weight: 500;
+        color: $theme-color;
+        line-height: 1;
+        padding: 12px 32px;
+        display: inline-block;
+        border: 1px solid transparent;
+        background-color: $white;
+        &:hover {
+            background-color: $black-soft;
+        }
+        // responsive
+        @media #{$xs-device}{
+            width: 100%;
+        }
+    }
+    ::-webkit-input-placeholder { /* Edge */
+        color: #ddd;
+    }
+      
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #ddd;
+    }
+      
+    ::placeholder {
+        color: #ddd;
+    }
+}
+
+.timeline-bg-content {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+    padding: 0 30px;
+    // responsive
+    @media #{$md-device, $sm-device}{
+        height: 400px;
+    }
+    @media #{$xs-device}{
+        height: 300px;
+    }
+
+    .timeline-bg-title {
+        top: 50%;
+        left: 50%;
+        width: 610px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        color: $white;
+        text-align: center;
+        font-size: 36px;
+        // responsive
+        @media #{$xlmid-device}{
+            width: 540px;
+            font-size: 32px;
+        }
+        @media #{$lg-device, $sm-device}{
+            width: 100%;
+            padding: 0 30px;
+            font-size: 26px;
+        }
+        @media #{$xxs-device}{
+            width: 100%;
+            font-size: 22px;
+            padding: 0 30px;
+        }
+    }
+}

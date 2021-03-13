@@ -1,0 +1,262 @@
+/*--------- about author area start ---------*/
+.about-author-details {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-author-menu {
+    li {
+        border-bottom: 1px solid $bdr-color;
+        padding-bottom: 4px;
+        margin-bottom: 16px;
+        transition: 0.4s;
+        a {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.8;
+            color: $black-soft;
+            text-transform: capitalize;
+            &.active {
+                color: $theme-color;
+            }
+        }
+        &:hover {
+            border-color: $theme-color;
+            a {
+                color: $theme-color;
+            }
+        }
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.about-description {
+    background-color: $white;
+    padding: 42px 68px 36px 68px;
+    //responsive
+    @media #{$md-device, $sm-device} {
+        padding: 30px;
+        margin-top: 20px;
+    }
+}
+
+.author-desc-title {
+    border-bottom: 1px solid $bdr-color;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    .author {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+/*--------- about author area end ---------*/
+
+/*------- photos section style start -------*/
+.content-box {
+    padding: 30px;
+    background-color: $white;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 5px 0px rgba(51, 51, 51, 0.2);
+}
+  
+.content-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $black-soft;
+    line-height: 1.3;
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 48px;
+    padding-bottom: 25px;
+    text-transform: capitalize;
+    border-bottom: 1px solid $bdr-color;
+}
+
+.photo-group {
+    margin-top: 30px;
+    cursor: pointer;
+    &:hover {
+        .gallery-overlay {
+            &:before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .view-icon {
+            opacity: 1;
+            visibility: visible;
+        }
+        .photos-caption {
+            color: $theme-color;
+        }
+    }
+    &.active {
+        .view-icon {
+            opacity: 1;
+            visibility: visible;
+        }
+        .gallery-overlay {
+            &:before {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.gallery-overlay {
+    position: relative;
+    &:before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        background-color: rgba($black, 0.4%);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+    }
+}
+
+.photo-gallery-caption {
+    text-align: center;
+    padding: 13px 15px 17px;
+    box-shadow: 0px 1px 5px 0px rgba(51, 51, 51, 0.2);
+    .photos-caption {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: $black-soft;
+        text-transform: capitalize;
+        transition: 0.4s;
+        //responsive
+        @media #{$md-device} {
+            font-size: 13px;
+        }
+        @media #{$sm-device} {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+.view-icon {
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    position: absolute;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    //responsive
+    @media #{$md-device, $sm-device} {
+        width: 40px;
+        height: 40px;
+    }
+    &:before {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        content: '';
+        position: absolute;
+        background-color: $white;
+    }
+    &:after {
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-color: $white;
+
+    }
+}
+
+.load-more {
+    line-height: 1;
+    margin-top: 28px;
+    &-btn {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+        color: $black-soft;
+        text-transform: capitalize;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+/*------- photos section style end -------*/
+
+/*-------- friend list area start --------*/
+.friends-section {
+    .content-box {
+        padding: 30px 0; 
+        &.friends-zone {
+            padding: 0;
+            background-color: transparent;
+            box-shadow: none;
+            .friend-list-view {
+                background-color: $white;
+                &:hover {
+                    background-color: $theme-color;
+                }
+            }
+        }
+    } 
+}
+.friend-list-view {
+    display: flex;
+    padding: 25px 30px;
+    align-items: center;
+    margin-top: 20px;
+    transition: 0.4s;
+    background-color: $white;
+    box-shadow: 0px 1px 5px 0px rgba(51, 51, 51, 0.2);
+    //responsive
+    @media #{$lg-device} {
+        padding: 20px 15px;
+    }
+    &:hover {
+        background-color: $theme-color;
+        // box-shadow: 0px 0px 8px 1px rgba(220, 71, 52, 0.8);
+        .author {
+            a {
+                color: $white;
+            }
+        }
+        .add-frnd {
+            color: $white;
+        }
+    }
+    .add-frnd {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.8;
+        color: $paragraph-light;
+        text-transform: capitalize;
+    }
+    .posted-author {
+        // responsive
+        @media #{$sm-device} {
+            margin-left: 8px;
+        }
+        @media #{$xs-device} {
+            margin-left: 20px;
+        }
+    }
+}
+/*-------- friend list area end --------*/
