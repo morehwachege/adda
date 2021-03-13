@@ -1,6 +1,8 @@
 # adda Social Site Template
 Adda  is a social app UI design written mostly  in HTML, CSS, JS For Search Engine Optimization ... It;s a six page and the Link to demo is given so you can check it out before trying it... 
 
+![Libre](./adda.png)
+
 One Paragraph of project description goes here
 
 ## Getting Started
@@ -18,16 +20,10 @@ After cloning/Download and rearranging the folders find the index.html page and 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-[Live Demo](http://femar.great-site.net/adda)
-```
 ```
 finished
 ```
-LIVE DEMO 2 
+LIVE DEMO 
 [Live Demo](http://femar.great-site.net/adda)
 
 ## Running the tests
