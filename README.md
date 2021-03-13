@@ -51,3 +51,4 @@ This project is licensed under the GNU General License - see the [LICENSE.md](LI
 
 ## Acknowledgments
 * 
+[© aduki, Inc 2021](http://www.aduki.net)
