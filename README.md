@@ -1,17 +1,16 @@
 # adda Social Site Template
-Adda  is a social app UI design written mostly  in HTML, CSS, JS For Search Engine Optimization ... It;s a six page and the Link to demo is given so you can check it out before trying it... 
+Adda  is a social app
 
 ![Libre](./adda.png)
 
 One Paragraph of project description goes here
 
 ## Getting Started
-
-Download the codes and Group the folders according their commit Branch.
+Clone the repository to have it working in your local directory.
 
 ### Prerequisites
 
-After cloning/Download and rearranging the folders find the index.html page and view it in a browser
+The files are ready to be viewed in a browser after cloning or downloading.
 
 ```
 
@@ -37,12 +36,14 @@ Fork This repo to Use it
 * [sass](https://sass-lang.com//) - Added For styles
 * [Framework Y](http://framework-y.com/) - Framework
 * [Adobe XD](https://www.adobe.com/products/xd.html) - Used to generate UI Layout
+* Progressive development is ongoing.
 
 
 
 ## Authors
 
 * **Fredrick Femar Ochieng** - *Initial work* - [Femar](https://github.com/fescii)
+* **Moreh Wa Chege** - *Progressive Development* - [morehwachege](https://github.com/morehwachege)
 
 
 ## License
