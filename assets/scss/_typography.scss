@@ -1,0 +1,267 @@
+/*------ Typography Style Start ------*/
+
+body {
+    color: $paragraph;
+    line-height: 1.7;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #f1f1f1;
+    font-family: $font-family-base;
+}
+
+a {
+    transition: 0.4s;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+p {
+    margin-bottom: 8px; 
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $black-soft;
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    transition: 0.4s;
+}
+
+.bg-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn,
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    box-shadow: none;
+    transition: 0.4s;
+    background-color: transparent;
+
+    &:active,
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+input,
+textarea {
+    resize: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+// Selection Style
+::-moz-selection {
+    color: $white;
+    background: $theme-color;
+}
+
+::selection {
+    color: $white;
+    background: $theme-color;
+}
+
+// placeholder text style
+::placeholder {
+    color: #999;
+    font-size: 13px;
+    opacity: 1;
+}
+
+/*Custom Scroll (Perfect Scroll)*/
+.custom-scroll {
+    position: relative;
+    overflow: hidden;
+
+    &.ps {
+
+        & .ps__rail-y,
+        & .ps__rail-x {
+            background-color: transparent;
+
+            & [class*="ps__thumb"] {
+                transition: all 0.3s ease;
+            }
+        }
+
+        & .ps__rail-y {
+            width: 3px;
+            right: 2px;
+
+            & .ps__thumb-y {
+                width: 100%;
+                right: 0;
+            }
+        }
+
+        & .ps__rail-x {
+            height: 6px;
+            bottom: 3px;
+
+            & .ps__thumb-x {
+                height: 100%;
+            }
+        }
+    }
+}
+
+// slick arrow style
+.slick-arrow-style {
+    button {
+        &.slick-arrow {
+            top: 50%;
+            left: 0;
+            color: $black-soft;
+            font-size: 30px;
+            cursor: pointer;
+            display: block;
+            line-height: 1;
+            position: absolute;
+            transform: translateY(-50%);
+            z-index: 1;
+            transition: 0.4s;
+
+            &.slick-next {
+                left: auto;
+                right: 0;
+            }
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+// Slick Slider Gutters
+.slick-track {
+    line-height: 1;
+}
+@for $i from 3 through 20 {
+    &.slick-row-#{1 * $i} {
+        .slick-list {
+            margin: 0 #{-1px * $i};
+
+            .slick-slide {
+                margin: 0 #{1px * $i};
+            }
+        }
+    }
+}
+
+/* ----scroll to top css start ----*/
+.scroll-top {
+    bottom: 80px;
+    cursor: pointer;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    width: 50px;
+    z-index: 9999;
+    transition: 0.4s;
+    border-radius: 50%;
+    background-color: $theme-color;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    // responsive
+    @media #{$sm-device} {
+        display: none;
+    }
+
+    i {
+        line-height: 50px;
+        color: #fff;
+        font-size: 25px;
+    }
+
+    &.not-visible {
+        bottom: -50px;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &:hover {
+        background-color: $black-soft;
+    }
+}
+
+/* ----scroll to top css end ----*/
+
+// custom container
+.container {
+    @media #{$md-device} {
+        max-width: 600px;
+    }
+    @media #{$sm-device} {
+        max-width: 500px;
+    }
+    @media #{$xs-device} {
+        max-width: 450px;
+    }
+}
+
+// custom row
+@for $i from 0 through 30 {
+    .row-#{1 * $i} {
+        margin-left: -0.5px * $i;
+        margin-right: -0.5px * $i;
+
+        &>[class*="col"] {
+            padding-left: 0.5px * $i;
+            padding-right: 0.5px * $i;
+        }
+    }
+}
+
+// light gallery customization
+.lg-backdrop {
+    background-color: rgba($black-soft, 0.9);
+}
+
+.lg-outer {
+    .lg-thumb-outer {
+        display: flex;
+        justify-content: center;
+    }
+}
