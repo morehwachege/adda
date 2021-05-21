@@ -56,6 +56,6 @@ node indian
 This project is licensed under the GNU General License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-* **[© aduki, Inc 2021](http://www.aduki.net)
-* **[© Moreh Wa Chege 2021](http://www.github.com/morehwachege)
+* ** [© aduki, Inc 2021](http://www.aduki.net)
+* ** [© Moreh Wa Chege 2021](http://www.github.com/morehwachege)
 
